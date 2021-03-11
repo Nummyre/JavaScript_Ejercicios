@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--
+Enciende y apaga la bombilla
+-->
+<html>
+    <head>
+        <title>La bombilla</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <img id="bombilla" src="bombilla3.jpg" height="200" width="150">
+        <p id="mensaje"></p>
+        <button type="button" onclick="enciende();">¡Enciende!</button>
+        <button type="button" onclick="apaga();">¡Apaga!</button>
+        <script>
+            var bombilla = document.getElementById('bombilla');
+            var contador = 0;
+            var mensaje = document.getElementById('mensaje');
+
+            function enciende() {
+                bombilla = document.getElementById('bombilla').src = "bombilla2.jpg";
+
+                contador++;
+                if (contador >= 2) {
+
+                    mensaje.innerHTML = "¡Ya está encendido!";
+                }
+
+                bombilla.innerHTML;
+            }
+
+            function apaga() {
+                contador = 0;
+                mensaje.innerHTML = "";
+                bombilla = document.getElementById('bombilla').src = "bombilla3.jpg";
+                bombilla.innerHTML;
+            }
+
+        </script>
+    </body>
+</html>
